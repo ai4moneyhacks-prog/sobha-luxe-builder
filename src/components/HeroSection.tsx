@@ -12,8 +12,15 @@ const HeroSection = () => {
         backgroundImage: `linear-gradient(to bottom, rgba(14, 14, 14, 0.65), rgba(14, 14, 14, 0.75)), url(${heroImage})`
       }}
     >
-      <div className="container mx-auto px-4 py-12 md:py-24">
-        <div className="max-w-4xl mx-auto text-center space-y-5 md:space-y-8 fade-up">
+      {/* Floating Mini-Trust Ribbon */}
+      <div className="absolute top-20 right-4 md:top-24 md:right-6 z-10 fade-up">
+        <p className="text-[11px] md:text-xs text-luxury-gold/60 font-serif italic animate-pulse">
+          Authorised Channel Partner: Noida Estate Homes
+        </p>
+      </div>
+
+      <div className="container mx-auto px-4 py-8 md:py-24">
+        <div className="max-w-4xl mx-auto text-center space-y-4 md:space-y-6 fade-up">
           {/* Pre-launch Badge */}
           <div className="inline-flex items-center gap-2 bg-luxury-gold/10 border border-luxury-gold/30 rounded-full px-6 py-2 text-luxury-gold text-sm font-medium backdrop-blur-sm">
             🏗️ Pre-Launch Now Open | RERA Coming Soon
@@ -69,7 +76,7 @@ const HeroSection = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="space-y-2 md:space-y-3 mt-6 md:mt-10">
+          <div className="space-y-2 mt-5 md:mt-8">
             <Button 
               variant="luxury" 
               size="lg"
@@ -81,8 +88,16 @@ const HeroSection = () => {
                 Get Pre-Launch Price on WhatsApp
               </a>
             </Button>
+            
+            {/* Golden Ribbon - Sticky on scroll */}
+            <div className="sticky top-16 z-20 py-2">
+              <p className="text-[13px] font-semibold text-luxury-gold">
+                ⚡ Limited Pre-Launch Slots Open — Enquire Now on WhatsApp
+              </p>
+            </div>
+            
             <p className="text-xs md:text-sm text-muted-foreground">
-              ⚡ Instant reply – takes less than 15 seconds
+              Instant reply – takes less than 15 seconds
             </p>
           </div>
         </div>

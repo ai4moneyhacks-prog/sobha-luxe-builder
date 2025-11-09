@@ -8,8 +8,11 @@ const FloatingWhatsApp = () => {
       href={WHATSAPP_URL}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-full bg-gradient-to-r from-luxury-gold-dark to-luxury-gold shadow-lg hover:shadow-[0_0_30px_hsl(45_68%_52%/0.6)] hover:scale-110 transition-all duration-300 group"
+      className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-full bg-gradient-to-r from-luxury-gold-dark to-luxury-gold shadow-lg hover:shadow-[0_0_40px_hsl(45_68%_52%/0.8)] hover:scale-110 transition-all duration-300 group animate-[pulse_3s_ease-in-out_infinite]"
       aria-label="Contact on WhatsApp"
+      style={{
+        boxShadow: '0 0 20px hsl(45 68% 52% / 0.4), 0 0 40px hsl(45 68% 52% / 0.2)'
+      }}
     >
       <MessageCircle className="w-7 h-7 md:w-8 md:h-8 text-luxury-black" />
       <span className="absolute -top-1 -right-1 flex h-4 w-4">
