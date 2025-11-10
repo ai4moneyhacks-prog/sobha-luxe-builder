@@ -24,6 +24,8 @@ const GalleryFormSection = () => {
     agreed: false,
   });
 
+  const [buttonState, setButtonState] = useState<'idle' | 'sending' | 'sent'>('idle');
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -32,9 +34,19 @@ const GalleryFormSection = () => {
       return;
     }
 
-    const message = `Hi, I'm ${formData.name}. Interested in Sobha pre-launch (Sector 1, Greater Noida West). Budget ${formData.budget}. ${formData.bhk ? `Looking for ${formData.bhk}.` : ''} Please share brochure & booking details.`;
-    const whatsappURL = `https://wa.me/917827495003?text=${encodeURIComponent(message)}`;
-    window.open(whatsappURL, "_blank");
+    setButtonState('sending');
+    
+    setTimeout(() => {
+      const message = `Hi, I'm ${formData.name}. Interested in Sobha pre-launch (Sector 1, Greater Noida West). Budget ${formData.budget}. ${formData.bhk ? `Looking for ${formData.bhk}.` : ''} Please share brochure & booking details.`;
+      const whatsappURL = `https://wa.me/917827495003?text=${encodeURIComponent(message)}`;
+      window.open(whatsappURL, "_blank");
+      
+      setButtonState('sent');
+      
+      setTimeout(() => {
+        setButtonState('idle');
+      }, 3000);
+    }, 1000);
   };
 
   return (
@@ -155,8 +167,11 @@ const GalleryFormSection = () => {
                 variant="luxury" 
                 size="xl"
                 className="w-full"
+                disabled={buttonState !== 'idle'}
               >
-                Send My Enquiry on WhatsApp
+                {buttonState === 'idle' && 'Send My Enquiry on WhatsApp'}
+                {buttonState === 'sending' && '➡️ Sending…'}
+                {buttonState === 'sent' && '✅ Sent via WhatsApp'}
               </Button>
             </form>
           </div>

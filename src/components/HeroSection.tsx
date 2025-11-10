@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { MapPin, Home, IndianRupee, Sparkles, Leaf, Train, Search } from "lucide-react";
+import { MapPin, Home, Sparkles, IndianRupee } from "lucide-react";
 import heroImage from "@/assets/hero-building.jpg";
 
 const WHATSAPP_URL = "https://wa.me/917827495003?text=Hi,%20I'm%20interested%20in%20Sobha%20pre-launch%20(Sector%201,%20Greater%20Noida%20West).%20Please%20share%20price%20and%20brochure%20details.";
@@ -7,79 +7,98 @@ const WHATSAPP_URL = "https://wa.me/917827495003?text=Hi,%20I'm%20interested%20i
 const HeroSection = () => {
   return (
     <section 
-      className="relative min-h-[90vh] flex items-center justify-center bg-cover bg-center"
+      className="relative min-h-screen flex flex-col bg-cover bg-center"
       style={{
-        backgroundImage: `linear-gradient(to bottom, rgba(14, 14, 14, 0.65), rgba(14, 14, 14, 0.75)), url(${heroImage})`
+        backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), url(${heroImage})`
       }}
     >
-      <div className="container mx-auto px-4 py-16 md:py-24">
-        <div className="max-w-4xl mx-auto text-center space-y-8 fade-up">
-          {/* Pre-launch Badge */}
-          <div className="inline-flex items-center gap-2 bg-luxury-gold/10 border border-luxury-gold/30 rounded-full px-6 py-2 text-luxury-gold text-sm font-medium backdrop-blur-sm">
-            🏗️ Pre-Launch Now Open | RERA Coming Soon
-          </div>
+      {/* Floating Ribbon - Pre-Launch Badge */}
+      <div className="w-full bg-gradient-to-r from-luxury-gold-dark via-luxury-gold to-luxury-gold-dark py-2 animate-[slideInFromTop_0.6s_ease-out]">
+        <p className="text-center text-luxury-black text-xs md:text-[13px] font-bold tracking-wide">
+          🏗️ Pre-Launch Now Open | RERA Coming Soon
+        </p>
+      </div>
 
-          {/* Main Headline */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-foreground leading-tight">
-            SOBHA – Luxury 2, 3 & 4 BHK Residences
-          </h1>
-          
-          <h2 className="text-xl md:text-2xl text-muted-foreground font-light">
-            in Sector 1, Greater Noida West
-          </h2>
+      {/* Main Hero Content */}
+      <div className="flex-1 flex items-center justify-center">
+        <div className="container mx-auto px-4 py-6 md:py-12">
+          <div className="max-w-4xl mx-auto text-center space-y-4 md:space-y-5 fade-up">
+            
+            {/* Trust Line */}
+            <div className="flex flex-col items-center gap-1">
+              <p className="text-[11px] md:text-xs text-foreground/85 font-serif italic">
+                Authorised Channel Partner: Noida Estate Homes
+              </p>
+              <div className="h-[1px] w-[30px] bg-luxury-gold/60"></div>
+            </div>
 
-          <p className="text-base md:text-lg text-foreground/80 max-w-2xl mx-auto font-light leading-relaxed">
-            Signature Sobha quality, premium amenities, and strategic connectivity — curated for modern families & investors.
-          </p>
+            {/* Main Heading Block */}
+            <div className="space-y-2 md:space-y-3">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground leading-tight">
+                Experience the Art of Living — By SOBHA
+              </h1>
+              
+              <h2 className="text-base md:text-xl lg:text-2xl text-foreground/90 font-light max-w-3xl mx-auto">
+                Luxury 2, 3 & 4 BHK Residences in Sector 1, Greater Noida West
+              </h2>
+            </div>
 
-          {/* Snapshot Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
-            <div className="bg-card/50 backdrop-blur-sm border border-luxury-gold/20 rounded-lg p-6 space-y-2">
-              <MapPin className="w-8 h-8 text-luxury-gold mx-auto" />
-              <p className="text-foreground font-medium">Sector 1, Greater Noida West</p>
+            {/* 4 Key Highlights Cards - 2x2 Grid */}
+            <div className="grid grid-cols-2 gap-3 md:gap-4 mt-4 md:mt-6 max-w-3xl mx-auto">
+              <div className="bg-luxury-gold/5 border border-luxury-gold/60 rounded-xl p-4 md:p-5 space-y-2 hover:shadow-[0_0_20px_rgba(212,175,55,0.3)] transition-all duration-200">
+                <MapPin className="w-5 h-5 md:w-6 md:h-6 text-luxury-gold mx-auto" />
+                <p className="text-foreground text-xs md:text-sm font-medium leading-snug">
+                  Prime Location<br />Sector 1, Greater Noida West
+                </p>
+              </div>
+              
+              <div className="bg-luxury-gold/5 border border-luxury-gold/60 rounded-xl p-4 md:p-5 space-y-2 hover:shadow-[0_0_20px_rgba(212,175,55,0.3)] transition-all duration-200">
+                <Home className="w-5 h-5 md:w-6 md:h-6 text-luxury-gold mx-auto" />
+                <p className="text-foreground text-xs md:text-sm font-medium leading-snug">
+                  Luxury Residences<br />2, 3 & 4 BHK
+                </p>
+              </div>
+              
+              <div className="bg-luxury-gold/5 border border-luxury-gold/60 rounded-xl p-4 md:p-5 space-y-2 hover:shadow-[0_0_20px_rgba(212,175,55,0.3)] transition-all duration-200">
+                <Sparkles className="w-5 h-5 md:w-6 md:h-6 text-luxury-gold mx-auto" />
+                <p className="text-foreground text-xs md:text-sm font-medium leading-snug">
+                  Sobha Signature Quality<br />World-Class Amenities
+                </p>
+              </div>
+              
+              <div className="bg-luxury-gold/5 border border-luxury-gold/60 rounded-xl p-4 md:p-5 space-y-2 hover:shadow-[0_0_20px_rgba(212,175,55,0.3)] transition-all duration-200">
+                <IndianRupee className="w-5 h-5 md:w-6 md:h-6 text-luxury-gold mx-auto" />
+                <p className="text-foreground text-xs md:text-sm font-medium leading-snug">
+                  Starting Price<br />₹2.25 Cr+
+                </p>
+              </div>
             </div>
-            <div className="bg-card/50 backdrop-blur-sm border border-luxury-gold/20 rounded-lg p-6 space-y-2">
-              <Home className="w-8 h-8 text-luxury-gold mx-auto" />
-              <p className="text-foreground font-medium">2, 3 & 4 BHK Apartments</p>
-            </div>
-            <div className="bg-card/50 backdrop-blur-sm border border-luxury-gold/20 rounded-lg p-6 space-y-2">
-              <IndianRupee className="w-8 h-8 text-luxury-gold mx-auto" />
-              <p className="text-foreground font-medium">Starting ₹2.25 Cr+</p>
-            </div>
-          </div>
 
-          {/* Trust Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
-            <div className="flex items-center justify-center gap-3 bg-secondary/30 backdrop-blur-sm rounded-lg p-4">
-              <Sparkles className="w-5 h-5 text-luxury-gold flex-shrink-0" />
-              <span className="text-foreground text-sm font-medium">Premium Sobha Quality</span>
+            {/* Pre-CTA Microcopy */}
+            <div className="pt-2 md:pt-3">
+              <p className="text-[13px] md:text-sm font-semibold text-luxury-gold">
+                ⚡ Limited Pre-Launch Slots Open — Enquire Now on WhatsApp
+              </p>
             </div>
-            <div className="flex items-center justify-center gap-3 bg-secondary/30 backdrop-blur-sm rounded-lg p-4">
-              <Leaf className="w-5 h-5 text-luxury-gold flex-shrink-0" />
-              <span className="text-foreground text-sm font-medium">World-Class Amenities</span>
-            </div>
-            <div className="flex items-center justify-center gap-3 bg-secondary/30 backdrop-blur-sm rounded-lg p-4">
-              <Train className="w-5 h-5 text-luxury-gold flex-shrink-0" />
-              <span className="text-foreground text-sm font-medium">Strategic Connectivity</span>
-            </div>
-          </div>
 
-          {/* CTA Button */}
-          <div className="space-y-3 mt-10">
-            <Button 
-              variant="luxury" 
-              size="xl"
-              className="w-full md:w-auto"
-              asChild
-            >
-              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-                <Search className="w-5 h-5" />
-                Get Pre-Launch Price on WhatsApp
-              </a>
-            </Button>
-            <p className="text-sm text-muted-foreground">
-              ⚡ Instant reply – takes less than 15 seconds
-            </p>
+            {/* Primary CTA Button */}
+            <div className="space-y-2">
+              <Button 
+                variant="luxury" 
+                size="lg"
+                className="w-[80%] md:w-auto md:h-14 md:px-12 md:text-lg rounded-full shadow-[0_0_30px_rgba(212,175,55,0.4)] hover:shadow-[0_0_40px_rgba(212,175,55,0.6)] animate-[pulse_3s_ease-in-out_infinite]"
+                asChild
+              >
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                  Get Pre-Launch Price on WhatsApp
+                </a>
+              </Button>
+              
+              {/* Microtext Below Button */}
+              <p className="text-xs md:text-sm text-muted-foreground/80">
+                Instant Reply — Takes Less Than 15 Seconds
+              </p>
+            </div>
           </div>
         </div>
       </div>
