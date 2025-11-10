@@ -8,43 +8,43 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 5.5%;
-    --foreground: 45 50% 85%;
+    --background: 30 20% 15%;
+    --foreground: 45 50% 92%;
 
-    --card: 0 0% 8%;
-    --card-foreground: 45 50% 85%;
+    --card: 30 18% 18%;
+    --card-foreground: 45 50% 92%;
 
-    --popover: 0 0% 8%;
-    --popover-foreground: 45 50% 85%;
+    --popover: 30 18% 18%;
+    --popover-foreground: 45 50% 92%;
 
     --primary: 45 68% 52%;
-    --primary-foreground: 0 0% 5.5%;
+    --primary-foreground: 30 20% 15%;
 
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 45 50% 85%;
+    --secondary: 30 15% 22%;
+    --secondary-foreground: 45 50% 92%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 45 15% 60%;
+    --muted: 30 15% 25%;
+    --muted-foreground: 45 20% 65%;
 
     --accent: 45 68% 52%;
-    --accent-foreground: 0 0% 5.5%;
+    --accent-foreground: 30 20% 15%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 45 50% 85%;
+    --destructive-foreground: 45 50% 92%;
 
-    --border: 45 20% 20%;
-    --input: 0 0% 15%;
+    --border: 45 25% 28%;
+    --input: 30 15% 22%;
     --ring: 45 68% 52%;
 
     --radius: 0.75rem;
     
-    --luxury-black: 0 0% 5.5%;
+    --luxury-black: 30 20% 15%;
     --luxury-gold: 45 68% 52%;
     --luxury-gold-light: 45 70% 65%;
     --luxury-gold-dark: 45 60% 40%;
     
     --gradient-gold: linear-gradient(135deg, hsl(45 60% 40%), hsl(45 68% 52%));
-    --gradient-dark: linear-gradient(180deg, hsl(0 0% 5.5%), hsl(0 0% 8%));
+    --gradient-dark: linear-gradient(180deg, hsl(30 20% 15%), hsl(30 18% 18%));
     
     --shadow-gold: 0 4px 20px hsl(45 68% 52% / 0.3);
     --shadow-gold-lg: 0 10px 40px hsl(45 68% 52% / 0.4);
